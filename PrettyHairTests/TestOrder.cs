@@ -50,7 +50,7 @@ namespace PrettyHairTests
            
             or.Add(o);
             or.Remove(o);
-            Assert.AreEqual(false, or.GetOrder(o.OrderId));
+            Assert.AreEqual(null, or.GetOrder(o.OrderId));
         }
 
         [TestMethod]
@@ -71,7 +71,7 @@ namespace PrettyHairTests
         [TestMethod]
         public void CanCheckAmount()
         {
-            Product product1 = new Product(00, "product", 5.99, 2);
+            Product product1 = new Product(00, "product", 5.99, 3);
             Product product2 = new Product(01, "product2", 5.99, 10);
             Product product3 = new Product(02, "product3", 5.99, 0);
             Product product4 = new Product(03, "product4", 5.99, 2);
